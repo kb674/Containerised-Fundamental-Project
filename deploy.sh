@@ -10,7 +10,7 @@ docker run -d -e MYSQL_DATABASE=flask-db -e MYSQL_ROOT_PASSWORD=password --name 
 docker build -t fundamental-project .
 
 # Run flask app container called 'flask-app'
-docker run -d -p 5000:5000 --name flask-app \
+docker run -d --name flask-app \
 -e DATABASE_URI=mysql+pymysql://root:password@mysql/flask-db  \
 -e SECRET_KEY=jjjhsdfkjsdfuuwwergsdf \
 --network trick-network \
