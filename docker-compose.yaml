@@ -9,7 +9,6 @@ services:
   trictionary_app:
     container_name: tricktionary_app
     image: kb674/tricktionary_image:latest
-    build: .
     environment:
         DATABASE_URI: mysql+pymysql://root:password@mysql/flask-db
         SECRET_KEY: kjsdfjdfisuuuerqsd
