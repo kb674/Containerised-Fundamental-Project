@@ -4,14 +4,14 @@ services:
     container_name: mysql
     image: mysql:5.7
     environment:
-        MYSQL_DATABASE: flask-db
-        MYSQL_ROOT_PASSWORD: password
+        MYSQL_DATABASE: (enter a database)
+        MYSQL_ROOT_PASSWORD: (enter a password)
   trictionary_app:
     container_name: tricktionary_app
     image: kb674/tricktionary_image:latest
     environment:
-        DATABASE_URI: mysql+pymysql://root:password@mysql/flask-db
-        SECRET_KEY: kjsdfjdfisuuuerqsd
+        DATABASE_URI: mysql+pymysql://root:( password )@mysql/( database )
+        SECRET_KEY: (enter a secret key)
     ports:
     - target: 5000
       published: 5000
