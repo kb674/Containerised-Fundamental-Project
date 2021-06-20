@@ -1,4 +1,4 @@
-# Fundamental-Containerised
+# Contianerisied Fundamental Project
 
 To run:
 * Enter the credentials in the compose.yaml.
