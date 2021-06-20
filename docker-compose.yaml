@@ -1,0 +1,18 @@
+version: "3.8"  
+services:
+  mysql:
+    container_name: mysql
+    image: mysql:5.7
+    environment:
+        MYSQL_DATABASE: (  enter a database )
+        MYSQL_ROOT_PASSWORD: ( enter a password )
+  trictionary_app:
+    container_name: tricktionary_app
+    image: kb674/tricktionary_image:latest
+    environment:
+        DATABASE_URI: mysql+pymysql://root:( password )@mysql/( database )
+        SECRET_KEY: ( enter a password )
+    ports:
+    - target: 5000
+      published: 5000
+      protocol: tcp
